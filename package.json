@@ -1,0 +1,45 @@
+{
+  "name": "FurucomboStakingAdapter",
+  "version": "0.1.0",
+  "description": "Furucombo staking adapter contracts",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "scripts/build.sh",
+    "compile": "truffle compile",
+    "test": "scripts/test.sh --network development",
+    "lint:solhint": "solhint \"contracts/**/*.sol\"",
+    "lint:prettier": "scripts/prettier.sh"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Ben Huang, Robin Pan",
+  "license": "MIT",
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.5",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^3.0.0",
+    "ethereumjs-abi": "^0.6.8",
+    "ethereumjs-util": "^6.2.0",
+    "ganache-cli": "^6.10.2-forking.0",
+    "husky": "^4.2.5",
+    "prettier": "^1.19.1",
+    "prettier-plugin-solidity": "^1.0.0-alpha.57",
+    "solc": "0.5.16",
+    "solhint": "^3.0.0",
+    "truffle": "^5.1.42",
+    "web3-provider-engine": "^15.0.12"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:prettier && npm run lint:solhint"
+    }
+  }
+}

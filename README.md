@@ -1,0 +1,3 @@
+# staking-adapter-contract
+
+It is an adapter to Synthetix `StakingRewards` contract which extends its functionality and allow msg.sender to do actions on behalf of other users as long as msg.sender is being approved by the user. User who wants to earn staking rewards of specific pool can interact with the related adapter just as how they interact with `StakingRewards`. If an agent is approved by a user, the agent is allowed to withdraw/getReward/exit on behalf of the user and funds will be transferred to the agent instead of the user. However, stake on behalf of others is permissionless.
